@@ -465,3 +465,32 @@ h2 span {
   margin: 0 10px;
   font-size: 24px;
 }
+
+.modal-content {
+  padding: 20px;
+}
+
+@media (max-width: 765px) {
+  .modal-dialog {
+    max-width: 90%; /* Adjusts modal width for small screens */
+  }
+  .modal-header h3,
+  .modal-body form p,
+  .modal-footer button {
+    font-size: 0.9rem; /* Smaller text for better readability */
+  }
+  .form-control {
+    padding: 10px; /* Reduced padding for input fields */
+    font-size: 0.9rem;
+  }
+  .modal-header h3 {
+    font-size: 1.2rem;
+  }
+  .btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+  #validationMessage {
+    font-size: 0.85rem;
+  }
+}

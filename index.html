@@ -97,24 +97,41 @@
         <div class="modal-content">
           <div class="modal-header"><h3>Register Form</h3></div>
           <div class="modal-body">
-            <input
-              type="text"
-              placeholder="Fullname"
-              class="form-control mb-2"
-            />
-            <input type="email" placeholder="email" class="form-control mb-2" />
-            <input
-              type="password"
-              placeholder="Password"
-              class="form-control mb-2"
-            />
-            <input type="tel" placeholder="Contact" class="form-control mb-2" />
+            <form id="registerForm">
+              <input
+                type="text"
+                placeholder="Fullname"
+                class="form-control mb-2"
+                id="fullname"
+              />
+              <input
+                type="email"
+                placeholder="email"
+                class="form-control mb-2"
+                id="registerEmail"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                class="form-control mb-2"
+                id="registerPassword"
+              />
+              <input
+                type="tel"
+                placeholder="Contact"
+                class="form-control mb-2"
+                id="contact"
+              />
 
-            <button class="btn btn-success mb-2">Register</button>
-            <p>
-              Already have an Account?
-              <a href="#loginmodal" data-dismiss="modal">Log In</a>
-            </p>
+              <button class="btn btn-success mb-2">Register</button>
+              <p>
+                Already have an Account?
+                <a href="#loginmodal" data-dismiss="modal" data-toggle="modal"
+                  >Log In</a
+                >
+              </p>
+            </form>
+            <div id="validationMessage" class="mt-2 text-danger"></div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-danger btn-sm" data-dismiss="modal">
@@ -129,9 +146,40 @@
     <div class="modal" id="loginmodal">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">/////////</div>
-          <div class="modal-body">login form</div>
-          <div class="modal-footer"></div>
+          <div class="modal-header"><h3>Login Form</h3></div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <input
+                type="email"
+                placeholder="Email"
+                class="form-control mb-2"
+                id="loginEmail"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                class="form-control mb-2"
+                id="loginPassword"
+              />
+
+              <button type="submit" class="btn btn-success mb-2">Login</button>
+              <p>
+                Don't have an account ?
+                <a
+                  href="#registermodal"
+                  data-dismiss="modal"
+                  data-toggle="modal"
+                  >Register</a
+                >
+              </p>
+            </form>
+            <div id="validationMessage" class="mt-2 text-danger"></div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-danger btn-sm" data-dismiss="modal">
+              Cancel
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -540,6 +588,13 @@
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
       crossorigin="anonymous"
     ></script> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -555,5 +610,7 @@
       integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
       crossorigin="anonymous"
     ></script>
+
+    <script src="script.js"></script>
   </body>
 </html>
