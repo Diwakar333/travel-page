@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar starts */
+#navbar {
+  background-color: #f9f9f9;
+}
+
+#logo {
+  font-size: 36px;
+  font-weight: 700;
+  color: #000;
+  text-shadow: 0px 1px 1px black;
+  margin-bottom: 5px;
+}
+
+#logo span {
+  color: #ffa500;
+}
+
+.navbar-toggler span {
+  color: #ffa500;
+  border: none;
+}
+
+.navbar-nav {
+  margin-left: 20px;
+}
+
+.nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 550;
+  color: black;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.5s ease;
+}
+
+.nav-item .nav-link:hover {
+  background: #ffa500;
+  color: white;
+}
+
+#navbar form button {
+  background-color: #ffa500;
+  color: white;
+  border: none;
+}
+
+.right-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right-bar button {
+  padding: 10px;
+  background: white;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 550;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  transition: 0.5s;
+}
+
+.right-bar button:hover {
+  background-color: #ffa500;
+  color: white;
+}
+
+/* #mynavbar {
+  margin-left: 70px;
+} */
+
+@media (max-width: 765px) {
+  #navbar a {
+    font-size: 30px;
+  }
+
+  #mynavbar li a {
+    font-size: 20px;
+  }
+
+  .right-bar a {
+    padding: 10px;
+    font-size: 20px;
+  }
+}
+
+/* Navbar ends */
+
+/* Home section starts */
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)),
+    url("/public/travel.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  text-align: center;
+  padding: 200px;
+}
+
+.content h5 {
+  color: white;
+  font-size: 38px;
+  font-weight: 500;
+  text-shadow: 0px 1px 1px black;
+}
+
+.content h1 {
+  color: white;
+  font-size: 70px;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px black;
+  margin-top: 5px;
+}
+
+.changeContent::after {
+  content: " ";
+  color: #ffa500;
+  text-shadow: 0px 1px 1px black;
+  animation: changetext 3s infinite linear;
+}
+@keyframes changetext {
+  0% {
+    content: "France";
+  }
+  10% {
+    content: "Australia";
+  }
+  20% {
+    content: "Egypt";
+  }
+  30% {
+    content: "Germany";
+  }
+  40% {
+    content: "India";
+  }
+  50% {
+    content: "Italy";
+  }
+  60% {
+    content: "USA";
+  }
+  70% {
+    content: "Japan";
+  }
+}
+
+.content p {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px black;
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.content a {
+  padding: 10px;
+  background: white;
+  color: black;
+  letter-spacing: 2px;
+  font-weight: 550;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.content a:hover {
+  background-color: #ffa500;
+  color: white;
+}
+
+@media (max-width: 850px) {
+  .home {
+    background-position: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 850px) {
+  .home .content h5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+  }
+
+  .content h1 {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .content p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .content a {
+    width: 100px;
+    padding: 10px;
+    font-size: 13px;
+    /* position: fixed; */
+  }
+}
+/* Home section ends */
+
+/* Section book starts */
+.left-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right Section with Form */
+.right-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-section form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.right-section form input,
+.right-section form textarea,
+.right-section form select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.right-section form textarea {
+  resize: none;
+}
+
+.right-section form .btn {
+  background-color: #ffa500;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.right-section form .btn:hover {
+  background-color: #45a049;
+}
+/* Section book ends */
+
+/* Section Packages starts */
+.gallery-section {
+  padding: 50px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+/* Ensure images are consistently sized */
+.package-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Card Button Styling */
+.package-card .btn {
+  background-color: #ffa500;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.package-card .btn:hover {
+  background-color: #ffa500;
+}
+
+/* Consistent Card Styling */
+.package-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.rating {
+  color: #ffd700;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+@media (max-width: 765px) {
+  .gallery-section h2 {
+    font-size: 35px;
+    font-weight: 500;
+  }
+}
+
+h2 span {
+  color: #ffa500;
+}
+/* Section Packages end */
+
+/* Services Section Styling */
+.services-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+/* Service Card Styling */
+.service-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Service Icon Styling */
+.service-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #4caf50;
+}
+
+@media (max-width: 765px) {
+  .services-section h2 {
+    font-size: 35px;
+    font-weight: 500;
+  }
+}
+
+.gallery-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.gallery-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+/* Gallery Image Styling */
+.gallery-image {
+  transition: transform 0.3s;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery-image:hover img {
+  transform: scale(1.1);
+}
+
+/* About Us Section */
+.about-section {
+  padding: 50px;
+  background-color: #f9f9f9;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.about-section img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-info {
+  padding: 20px;
+}
+
+.about-info h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.about-info p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer .social-icons a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 24px;
+}
